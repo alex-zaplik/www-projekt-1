@@ -1,0 +1,253 @@
+* {
+    box-sizing: border-box;
+
+    font-family: Arial;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 50% 50%;
+
+    width: 90%;
+    max-width: 960px;
+    margin: auto;
+    padding: 0;
+
+    background: #e8ecf1;
+}
+
+.header {
+    grid-column: 1 / span 2;
+    grid-row: 1;
+
+    padding: 2.5em;
+
+    text-align: center;
+    color: #fff;
+    background: #28456b;
+
+    box-shadow: 0 0.15em 0 0 rgba(0,0,0,0.3);
+}
+
+.description {
+    grid-column: 1 / span 2;
+    grid-row: 2;
+
+    padding: 1em;
+
+    color: #000;
+}
+
+.subjects, .hobbies {
+    margin: 0;
+    padding: 0;
+}
+
+.subjects {
+    grid-column: 1 / span 2;
+    grid-row: 3;
+}
+
+.hobbies {
+    grid-column: 1 / span 2;
+    grid-row: 4;
+}
+
+.sub-header {
+    display: block;
+
+    margin: 0;
+    margin-bottom: 0.2em;
+    padding: 0.6em;
+
+    background: #41618a;
+
+    box-shadow: 0 0.15em 0 0 rgba(0,0,0,0.3);
+    overflow: hidden;
+}
+
+.sub-header > h2 {
+    margin: 0;
+
+    color: #fff;
+}
+
+.header > h1, .header > h2, .header > h3 {
+    margin: 0;
+    padding: 0;
+}
+
+.header > h3 {
+    margin-top: 0.4em;
+}
+
+.header > h1 {
+    font-size: 2.5em;
+}
+
+.sub-list ul {
+    display: block;
+
+    padding: 0;
+    margin: 0;
+}
+
+.sub-list li {
+    list-style: none;
+}
+
+.sub-list li:hover {
+    background: #fff;
+    transition: background-color 0.3s ease-out;
+}
+
+.sub-list a {
+    display: block;
+
+    padding: 0.6em 1em;
+
+    color: inherit;
+    text-decoration: none;
+    color: #026BA6;
+}
+
+.sub-list a:hover {
+    color: #013654;
+    transition: color 0.3s ease-out;
+}
+
+#photo {
+    display: block;
+    float: right;
+    margin-left: 1em;
+    margin-bottom: 1em;
+    max-width: 30%;
+    border-radius: 0.3em;
+}
+
+h3.card-title {
+    text-align: left;
+    margin: 1rem;
+    margin-bottom: 0;
+    font-size: 1.5em;
+
+    grid-column: 1 / span 2;
+}
+
+.card {
+    grid-column: 1 / span 2;
+
+    border-radius: 0.2em;
+    overflow: hidden;
+    margin: 1rem;
+
+    background: #fff;
+}
+
+.card.left {
+    margin-bottom: 0;
+}
+
+.card > h4, .card > h5 {
+    display: block;
+
+    width: 100%;
+    margin: 0;
+    padding: 0.6em;
+
+    color: white;
+    font-size: 1em;
+}
+
+.card > h4 {
+    background: #41618a;
+}
+
+.card > h5 {
+    background: #6a8bb5;
+    font-weight: normal;
+}
+
+.card.right > h4 {
+    background: #a77c3a;
+}
+
+.card > div {
+    padding: 0.6em;
+}
+
+.card > div > p {
+    margin: 0;
+}
+
+.card.single {
+    margin-top: 2em;
+}
+
+.card.single ~ .card.single {
+    margin-top: 1em;
+}
+
+.back-button {
+    grid-column: 2;
+    justify-self: end;
+
+    border-radius: 0.2em;
+    overflow: hidden;
+
+    width: 7em;
+    margin: 1rem;
+    padding: 0.5em;
+
+    text-decoration: none;
+    text-align: center;
+    color: white;
+    background: #41618a;
+}
+
+.back-button:hover {
+    background: #8694a7;
+    transition: background-color 0.2s ease-out;
+}
+
+.fancy-shadow {
+    box-shadow: 0 1px 3px 0 rgba(0,0,0,.2), 0 1px 1px 0 rgba(0,0,0,.14), 0 2px 1px -1px rgba(0,0,0,.12);
+}
+
+@media screen and (min-width: 800px) {
+    .subjects {
+        grid-column: 1;
+        grid-row: 3;
+    }
+
+    .hobbies {
+        grid-column: 2;
+        grid-row: 3;
+    }
+
+    .hobbies > .sub-header {
+        border-left: 1px solid #3a5271;
+    }
+
+    .hobbies > .sub-list ul {
+        border-left: 1px solid;
+        border-image:  linear-gradient(#cedef3, #e8ecf1) 1 100%;
+    }
+
+    .card.left {
+        margin-bottom: 0;
+    }
+
+    .card.left {
+        grid-column: 1;
+
+        margin-bottom: 1em;
+        margin-right: 0.5em;
+    }
+
+    .card.right {
+        grid-column: 2;
+
+        margin-left: 0.5em;
+    }
+}
