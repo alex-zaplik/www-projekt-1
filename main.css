@@ -184,21 +184,30 @@ h3.card-title {
     margin-top: 1em;
 }
 
-.back-button {
+.button-wrapper {
     grid-column: 2;
-    justify-self: end;
+}
+
+.back-button {
+    float: right;
 
     border-radius: 0.2em;
     overflow: hidden;
 
     width: 7em;
-    margin: 1rem;
     padding: 0.5em;
+    margin: 1em;
 
     text-decoration: none;
     text-align: center;
     color: white;
     background: #41618a;
+}
+
+.back-button::after {
+    content: "";
+    display: block;
+    clear: both;
 }
 
 .back-button:hover {
