@@ -16,7 +16,7 @@
     background: #e8ecf1;
 }
 
-.header {
+header {
     grid-column: 1 / span 2;
     grid-row: 1;
 
@@ -73,16 +73,16 @@
     color: #fff;
 }
 
-.header > h1, .header > h2, .header > h3 {
+header > h1, header > h2, header > h3 {
     margin: 0;
     padding: 0;
 }
 
-.header > h3 {
+header > h3 {
     margin-top: 0.4em;
 }
 
-.header > h1 {
+header > h1 {
     font-size: 2.5em;
 }
 
@@ -129,7 +129,6 @@
 h3.card-title {
     text-align: left;
     margin: 1rem;
-    margin-bottom: 0;
     font-size: 1.5em;
 
     grid-column: 1 / span 2;
@@ -140,13 +139,13 @@ h3.card-title {
 
     border-radius: 0.2em;
     overflow: hidden;
-    margin: 1rem;
+    margin: 0rem 1rem;
 
     background: #fff;
 }
 
 .card.left {
-    margin-bottom: 0;
+    margin-bottom: 1rem;
 }
 
 .card > h4, .card > h5 {
@@ -182,10 +181,6 @@ h3.card-title {
 }
 
 .card.single {
-    margin-top: 2em;
-}
-
-.card.single ~ .card.single {
     margin-top: 1em;
 }
 
@@ -242,7 +237,6 @@ h3.card-title {
     .card.left {
         grid-column: 1;
 
-        margin-bottom: 1em;
         margin-right: 0.5em;
     }
 
